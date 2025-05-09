@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deutsche Leitstelle - Echtzeitspiel</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -28,6 +30,25 @@
     <section id="dispatch-log">
       <h2>📋 Einsatzprotokoll</h2>
       <ul id="log-list"></ul>
+    </section>
+
+    <section id="map-section">
+      <h2>🗺️ Karte</h2>
+      <div id="map" style="height: 400px; border-radius: 12px;"></div>
+    </section>
+
+    <section id="station-builder">
+      <h2>🏗️ Neue Wache bauen</h2>
+      <form id="station-form">
+        <select id="station-type">
+          <option>Feuerwache</option>
+          <option>Rettungswache</option>
+          <option>Polizeiwache</option>
+        </select>
+        <input type="text" id="station-location" placeholder="Ort eingeben" required />
+        <button type="submit">Wache bauen</button>
+      </form>
+      <ul id="station-list"></ul>
     </section>
   </main>
 
