@@ -2,62 +2,30 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leitstelle: Satelittenansicht</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitstellen Spiel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🛰️ Leitstelle - Satelittenansicht</h1>
-    <div id="status-bar">
-      <span id="balance">💰 Kontostand: 10000€</span>
-      <span id="personnel">👥 Personal: 10</span>
-    </div>
-  </header>
-
-  <main>
-    <div id="map-container">
-      <div id="map"></div>
-      <div id="control-panel">
-        <section id="station-builder">
-          <h3>🏗️ Wache bauen</h3>
-          <form id="station-form">
-            <select id="station-type">
-              <option>Feuerwache</option>
-              <option>Rettungswache</option>
-              <option>Polizeiwache</option>
-            </select>
-            <input type="text" id="station-location" placeholder="Ort" required />
-            <button type="submit">Bauen (5000€)</button>
-          </form>
-        </section>
-
-        <section id="vehicle-panel">
-          <h3>🚑 Fahrzeuge</h3>
-          <ul id="vehicle-list"></ul>
-          <button id="buy-vehicle">Fahrzeug kaufen (3000€)</button>
-        </section>
-
-        <section id="personnel-panel">
-          <h3>👥 Personal verwalten</h3>
-          <input type="number" id="assign-count" placeholder="Anzahl zuweisen" min="1" />
-          <button id="assign-personnel">Personal zu Fahrzeugen</button>
-        </section>
-
-        <section id="log">
-          <h3>📋 Einsatzprotokoll</h3>
-          <ul id="log-list"></ul>
-        </section>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Leitstellensimulation</p>
-  </footer>
+    <header>
+        <h1>Willkommen zum Leitstellen Spiel</h1>
+    </header>
+    <main>
+        <div id="sidebar">
+            <h2>Einsätze</h2>
+            <ul id="incident-list"></ul>
+        </div>
+        <div id="map-container">
+            <h2>Karte</h2>
+            <!-- Hier kommt die Karte -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Leitstellen Spiel</p>
+    </footer>
+    <script src="gameData.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
+    
